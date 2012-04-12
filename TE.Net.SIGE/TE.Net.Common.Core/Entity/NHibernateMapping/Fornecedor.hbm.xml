@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+ <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true">
+  <class name="TE.Net.Common.Core.Entity.Fornecedor, TE.Net.Common.Core" lazy="false" table="tipo_usuario">
+    <id name="Id" type="String" column="id"></id>
+      
+    <property name="Nome" type="String" column="nome"/>
+    <property name="NomeComercial" type="String" column="nome_comercial"/>
+	<property name="CNPJ" type="String" column="cnpj"/>
+  </class>
+</hibernate-mapping>  

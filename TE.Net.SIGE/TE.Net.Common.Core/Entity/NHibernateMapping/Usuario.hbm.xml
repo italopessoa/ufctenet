@@ -7,7 +7,7 @@
       </generator>
     </id>
     
-	<one-to-one name="TipoUsuario" class="TE.Net.Common.Core.Entity.TipoUsuario, TE.Net.Common.Core" update="cascade" />
+	<many-to-one name="TipoUsuario" class="TE.Net.Common.Core.Entity.TipoUsuario, TE.Net.Common.Core" update="cascade" />
 		
     <property name="Nome" type="String" column="nome"/>
     <property name="Login" type="String" column="login_usuario"/>

@@ -1,42 +1,42 @@
 using System;
-using System.Security;
 
 namespace TE.Net.Common.Core
 {
-	public class TipoUsuario
+	public class Fornecedor
 	{
-	
+		
 		#region Membros Privados
-			
-		private bool isChanged;
+		
+		private bool isChanged();
 		
 		//Chave Primária
-		private int id;
+		private string cnpj;
 		
 		//Propriedades
 		private string nome;
-		private string descricao;
+		private string nomeComercial;
 		
 		#endregion
 		
 		#region Construtor Padrão
 		
 		/// <summary>
-		/// Initializes a new instance of the <see cref="TE.Net.Common.Core.TipoUsuario"/> class.
+		/// Initializes a new instance of the <see cref="TE.Net.Common.Core.Fornecedor"/> class.
 		/// </summary>
-		public TipoUsuario ()
+		public Fornecedor ()
 		{
 			this.id = 0;
-			this.nome = String.Empty;
-			this.descricao = String.Empty;
+			this.nome = string.Empty;
+			this.nomeComercial = string.Empty;
+			this.cnpj = string.Empty;
 		}
 		
 		#endregion
-	
-		#region Contrutor Completo
+		
+		#region Construtor Completo
 		
 		/// <summary>
-		/// Initializes a new instance of the <see cref="TE.Net.Common.Core.TipoUsuario"/> class.
+		/// Initializes a new instance of the <see cref="TE.Net.Common.Core.Fornecedor"/> class.
 		/// </summary>
 		/// <param name='id'>
 		/// Identifier.
@@ -44,19 +44,23 @@ namespace TE.Net.Common.Core
 		/// <param name='nome'>
 		/// Nome.
 		/// </param>
-		/// <param name='descricao'>
-		/// Descricao.
+		/// <param name='nomeComercial'>
+		/// Nome comercial.
 		/// </param>
-		public TipoUsuario(int id, string nome, string descricao)
+		/// <param name='cnpj'>
+		/// Cnpj.
+		/// </param>
+		public Fornecedor(int id, string nome, string nomeComercial, string cnpj)
 		{
 			this.id = id;
 			this.nome = nome;
-			this.descricao = descricao;
+			this.nomeComercial = nomeComercial;
+			this.cnpj = cnpj;
 		}
 		
 		#endregion
-	
-		#region Propriedades Públicas
+		
+		#region Métodos Públicos
 		
 		/// <summary>
 		/// Gets or sets the identifier.
@@ -67,8 +71,7 @@ namespace TE.Net.Common.Core
 		public virtual int Id
 		{
 			get {return this.id;}
-			set
-			{
+			set {
 				this.isChanged = true;
 				this.id = value;
 			}
@@ -82,27 +85,43 @@ namespace TE.Net.Common.Core
 		/// </value>
 		public virtual string Nome
 		{
-			get{return this.nome;}
-			set 
+			get { return this.nome;}
+			set
 			{
 				this.isChanged = true;
-				this.nome = value;	
+				this.nome = value;
 			}
 		}
-			
+		
 		/// <summary>
-		/// Gets or sets the descricao.
+		/// Gets or sets the nome comercial.
 		/// </summary>
 		/// <value>
-		/// The descricao.
+		/// The nome comercial.
 		/// </value>
-		public virtual string Descricao
+		public virtual string NomeComercial
 		{
-			get { return this.descricao;}
-			set 
+			get {return this.nomeComercial;}
+			set
 			{
 				this.isChanged = true;
-				this.descricao = value;
+				this.nomeComercial = value;
+			}
+		}
+		
+		/// <summary>
+		/// Gets or sets the CNP.
+		/// </summary>
+		/// <value>
+		/// The CNP.
+		/// </value>
+		public virtual string CNPJ
+		{
+			get {return this.cnpj;}
+			set
+			{
+				this.isChanged = true;
+				this.cnpj = value;
 			}
 		}
 		
@@ -116,41 +135,33 @@ namespace TE.Net.Common.Core
 		{
 			get { return this.isChanged; }
 		}
-		
 		#endregion
-
+		
 		#region Equals
 		
 		/// <summary>
-		/// Determines whether the specified <see cref="System.Object"/> is equal to the current <see cref="TE.Net.Common.Core.TipoUsuario"/>.
+		/// Determines whether the specified <see cref="System.Object"/> is equal to the current <see cref="TE.Net.Common.Core.Fornecedor"/>.
 		/// </summary>
 		/// <param name='obj'>
-		/// The <see cref="System.Object"/> to compare with the current <see cref="TE.Net.Common.Core.TipoUsuario"/>.
+		/// The <see cref="System.Object"/> to compare with the current <see cref="TE.Net.Common.Core.Fornecedor"/>.
 		/// </param>
 		/// <returns>
 		/// <c>true</c> if the specified <see cref="System.Object"/> is equal to the current
-		/// <see cref="TE.Net.Common.Core.TipoUsuario"/>; otherwise, <c>false</c>.
+		/// <see cref="TE.Net.Common.Core.Fornecedor"/>; otherwise, <c>false</c>.
 		/// </returns>
 		public override bool Equals (object obj)
 		{
-			if(obj is TipoUsuario)
+			if(obj is Fornecedor)
 			{
-				if( (obj as TipoUsuario).Id == this.id)
+				if( (obj as Fornecedor).Id == this.id)
 					return true;
 			}
 			return false;
 		}
-		
 		#endregion
 		
-		#region GetHashCode
+		#region HashCode
 		
-		/// <summary>
-		/// Serves as a hash function for a <see cref="TE.Net.Common.Core.TipoUsuario"/> object.
-		/// </summary>
-		/// <returns>
-		/// A hash code for this instance that is suitable for use in hashing algorithms and data structures such as a hash table.
-		/// </returns>
 		public override int GetHashCode ()
 		{
 			int hash = 7;
@@ -158,7 +169,9 @@ namespace TE.Net.Common.Core
 			
 			return hash;
 		}
-		
 		#endregion
+		
+		
 	}
 }
+

@@ -229,6 +229,20 @@ namespace TE.Net.Common.Core
 		#endregion
 		
 		#region HashCode
+		
+		/// <summary>
+		/// Serves as a hash function for a <see cref="TE.Net.Common.Core.Usuario"/> object.
+		/// </summary>
+		/// <returns>
+		/// A hash code for this instance that is suitable for use in hashing algorithms and data structures such as a hash table.
+		/// </returns>
+		public override int GetHashCode ()
+		{
+			int hash = 7;
+  			hash = 31 * hash + this.id.GetHashCode();
+			
+			return hash;
+		}
 		#endregion
 		
 		
