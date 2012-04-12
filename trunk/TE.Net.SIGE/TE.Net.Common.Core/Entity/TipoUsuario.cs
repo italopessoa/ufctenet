@@ -10,8 +10,8 @@ namespace TE.Net.Common.Core
 			
 		private bool isChanged;
 		
-		//Primary Key
-		private Int32 id;
+		//Chave Primária
+		private int id;
 		
 		//Propriedades
 		private string nome;
@@ -21,6 +21,9 @@ namespace TE.Net.Common.Core
 		
 		#region Construtor Padrão
 		
+		/// <summary>
+		/// Initializes a new instance of the <see cref="TE.Net.Common.Core.TipoUsuario"/> class.
+		/// </summary>
 		public TipoUsuario ()
 		{
 			this.id = 0;
@@ -32,6 +35,18 @@ namespace TE.Net.Common.Core
 	
 		#region Contrutor Completo
 		
+		/// <summary>
+		/// Initializes a new instance of the <see cref="TE.Net.Common.Core.TipoUsuario"/> class.
+		/// </summary>
+		/// <param name='id'>
+		/// Identifier.
+		/// </param>
+		/// <param name='nome'>
+		/// Nome.
+		/// </param>
+		/// <param name='descricao'>
+		/// Descricao.
+		/// </param>
 		public TipoUsuario(int id, string nome, string descricao)
 		{
 			this.id = id;
