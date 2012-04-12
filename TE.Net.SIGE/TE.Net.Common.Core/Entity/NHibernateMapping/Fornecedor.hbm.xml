@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
  <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true">
-  <class name="TE.Net.Common.Core.Entity.Fornecedor, TE.Net.Common.Core" lazy="false" table="tipo_usuario">
+  <class name="TE.Net.Common.Core.Entity.Fornecedor, TE.Net.Common.Core" lazy="false" table="fornecedor">
     <id name="Id" type="String" column="id"></id>
       
     <property name="Nome" type="String" column="nome"/>
