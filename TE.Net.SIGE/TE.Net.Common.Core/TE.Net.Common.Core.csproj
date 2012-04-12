@@ -35,6 +35,26 @@
   <ItemGroup>
     <Compile Include="MyClass.cs" />
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Entity\TipoUsuario.cs" />
+    <Compile Include="Facade\ICoreFacade.cs" />
+    <Compile Include="Facade\Default\Facade.cs" />
+    <Compile Include="Service\ITipoUsuarioService.cs" />
+    <Compile Include="Service\Default\TipoUsuarioService.cs" />
+    <Compile Include="DAO\ITipoUsuarioDAO.cs" />
+    <Compile Include="DAO\NHibernate\TipoUsuarioNHibernateDAO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="DAO\" />
+    <Folder Include="DAO\NHibernate\" />
+    <Folder Include="Service\" />
+    <Folder Include="Service\Default\" />
+    <Folder Include="Facade\" />
+    <Folder Include="Facade\Default\" />
+    <Folder Include="Entity\" />
+    <Folder Include="Entity\NHibernateMapping\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Entity\NHibernateMapping\Usuario.hbm.xml" />
+  </ItemGroup>
 </Project>
