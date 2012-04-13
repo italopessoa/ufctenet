@@ -38,9 +38,6 @@ namespace TE.Net.Common.Core
 		/// <summary>
 		/// Initializes a new instance of the <see cref="TE.Net.Common.Core.Fornecedor"/> class.
 		/// </summary>
-		/// <param name='id'>
-		/// Identifier.
-		/// </param>
 		/// <param name='nome'>
 		/// Nome.
 		/// </param>
@@ -50,9 +47,8 @@ namespace TE.Net.Common.Core
 		/// <param name='cnpj'>
 		/// Cnpj.
 		/// </param>
-		public Fornecedor(int id, string nome, string nomeComercial, string cnpj)
+		public Fornecedor(string nome, string nomeComercial, string cnpj)
 		{
-			this.id = id;
 			this.nome = nome;
 			this.nomeComercial = nomeComercial;
 			this.cnpj = cnpj;
@@ -162,6 +158,12 @@ namespace TE.Net.Common.Core
 		
 		#region HashCode
 		
+		/// <summary>
+		/// Serves as a hash function for a <see cref="TE.Net.Common.Core.Fornecedor"/> object.
+		/// </summary>
+		/// <returns>
+		/// A hash code for this instance that is suitable for use in hashing algorithms and data structures such as a hash table.
+		/// </returns>
 		public override int GetHashCode ()
 		{
 			int hash = 7;

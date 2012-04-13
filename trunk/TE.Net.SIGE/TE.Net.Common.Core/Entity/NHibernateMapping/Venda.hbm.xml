@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+ <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true">
+  <class name="TE.Net.Common.Core.Entity.Venda, TE.Net.Common.Core" lazy="false" table="venda">
+    <id name="Codigo" column="codigo">
+      <generator class="sequence">
+        <param name="sequence">codigo_id_seq</param>
+      </generator>
+    </id>
+      
+	<many-to-one name="Produto" class="TE.Net.Common.Core.Entity.Produto, TE.Net.Common.Core" column="produto" update="cascade" />
+		
+    <property name="DataVenda" type="DateTime" column="data_venda"/>
+	<property name="Usuario" type="String" column="login_usuario"/>
+  </class>
+</hibernate-mapping>  
