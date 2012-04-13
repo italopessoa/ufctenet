@@ -7,7 +7,7 @@
       </generator>
     </id>
       
-	<many-to-one name="Fornecedor" class="TE.Net.Common.Core.Entity.Fornecedor, TE.Net.Common.Core" update="cascade" />
+	<many-to-one name="Fornecedor" class="TE.Net.Common.Core.Entity.Fornecedor, TE.Net.Common.Core" column="fornecedor" update="cascade" />
 		
     <property name="Nome" type="String" column="nome"/>
     <property name="ValorUnitario" type="double" column="valor_unitario"/>

@@ -47,9 +47,8 @@ namespace TE.Net.Common.Core
 		/// <param name='descricao'>
 		/// Descricao.
 		/// </param>
-		public TipoUsuario(int id, string nome, string descricao)
+		public TipoUsuario(string nome, string descricao)
 		{
-			this.id = id;
 			this.nome = nome;
 			this.descricao = descricao;
 		}

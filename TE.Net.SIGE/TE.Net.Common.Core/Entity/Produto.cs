@@ -43,9 +43,6 @@ namespace TE.Net.Common.Core
 		/// <summary>
 		/// Initializes a new instance of the <see cref="TE.Net.Common.Core.Produto"/> class.
 		/// </summary>
-		/// <param name='id'>
-		/// Identifier.
-		/// </param>
 		/// <param name='nome'>
 		/// Nome.
 		/// </param>
@@ -61,9 +58,8 @@ namespace TE.Net.Common.Core
 		/// <param name='fornecedor'>
 		/// Fornecedor.
 		/// </param>
-		public Produto(int id, string nome, double valor, DateTime dataValidade, int quantidade, Fornecedor fornecedor)
+		public Produto(string nome, double valor, DateTime dataValidade, int quantidade, Fornecedor fornecedor)
 		{
-			this.id =id;
 			this.nome = nome;
 			this.valorUnitario = valor;
 			this.dataValidade= dataValidade;
@@ -186,14 +182,14 @@ namespace TE.Net.Common.Core
 		#region Equals
 		
 		/// <summary>
-		/// Determines whether the specified <see cref="System.Object"/> is equal to the current <see cref="TE.Net.Common.Core.Fornecedor"/>.
+		/// Determines whether the specified <see cref="System.Object"/> is equal to the current <see cref="TE.Net.Common.Core.Produto"/>.
 		/// </summary>
 		/// <param name='obj'>
-		/// The <see cref="System.Object"/> to compare with the current <see cref="TE.Net.Common.Core.Fornecedor"/>.
+		/// The <see cref="System.Object"/> to compare with the current <see cref="TE.Net.Common.Core.Produto"/>.
 		/// </param>
 		/// <returns>
 		/// <c>true</c> if the specified <see cref="System.Object"/> is equal to the current
-		/// <see cref="TE.Net.Common.Core.Fornecedor"/>; otherwise, <c>false</c>.
+		/// <see cref="TE.Net.Common.Core.Produto"/>; otherwise, <c>false</c>.
 		/// </returns>
 		public override bool Equals (object obj)
 		{
@@ -208,6 +204,12 @@ namespace TE.Net.Common.Core
 		
 		#region HashCode
 		
+		/// <summary>
+		/// Serves as a hash function for a <see cref="TE.Net.Common.Core.Produto"/> object.
+		/// </summary>
+		/// <returns>
+		/// A hash code for this instance that is suitable for use in hashing algorithms and data structures such as a hash table.
+		/// </returns>
 		public override int GetHashCode ()
 		{
 			int hash = 7;
@@ -215,6 +217,7 @@ namespace TE.Net.Common.Core
 			
 			return hash;
 		}
+		
 		#endregion
 		
 	}

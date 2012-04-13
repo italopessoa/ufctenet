@@ -44,9 +44,6 @@ namespace TE.Net.Common.Core
 		/// <summary>
 		/// Initializes a new instance of the <see cref="TE.Net.Common.Core.Usuario"/> class.
 		/// </summary>
-		/// <param name='id'>
-		/// Identifier.
-		/// </param>
 		/// <param name='nome'>
 		/// Nome.
 		/// </param>
@@ -65,9 +62,8 @@ namespace TE.Net.Common.Core
 		/// <param name='email'>
 		/// Email.
 		/// </param>
-		public Usuario(int id, string nome, string login, string senha, TipoUsuario tipoUsuario,DateTime dtNascimento, string email)
+		public Usuario(string nome, string login, string senha, TipoUsuario tipoUsuario,DateTime dtNascimento, string email)
 		{
-			this.id = id;
 			this.nome = nome;
 			this.loginUsuario = login;
 			this.senha = senha;
