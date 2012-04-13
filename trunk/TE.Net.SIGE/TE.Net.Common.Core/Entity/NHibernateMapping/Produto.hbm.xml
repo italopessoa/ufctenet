@@ -8,6 +8,7 @@
     </id>
       
 	<many-to-one name="Fornecedor" class="TE.Net.Common.Core.Entity.Fornecedor, TE.Net.Common.Core" column="fornecedor" update="cascade" />
+	<many-to-one name="TipoProduto" class="TE.Net.Common.Core.Entity.TipoProduto, TE.Net.Common.Core" column="tipo_produto" update="cascade" />
 		
     <property name="Nome" type="String" column="nome"/>
     <property name="ValorUnitario" type="double" column="valor_unitario"/>

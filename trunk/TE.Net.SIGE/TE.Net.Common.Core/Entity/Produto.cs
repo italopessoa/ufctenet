@@ -18,6 +18,7 @@ namespace TE.Net.Common.Core
 		private DateTime dataValidade;
 		private int quantidade;
 		private Fornecedor fornecedor;
+		private TipoProduto tipoProduto;
 		
 		#endregion
 		
@@ -34,6 +35,7 @@ namespace TE.Net.Common.Core
 			this.dataValidade= null;
 			this.quantidade = 0;
 			this.fornecedor = null;
+			this.tipoProduto = null;
 		}
 		
 		#endregion
@@ -58,13 +60,17 @@ namespace TE.Net.Common.Core
 		/// <param name='fornecedor'>
 		/// Fornecedor.
 		/// </param>
-		public Produto(string nome, double valor, DateTime dataValidade, int quantidade, Fornecedor fornecedor)
+		/// <param name='tipoProduto'>
+		/// Tipo produto.
+		/// </param>
+		public Produto(string nome, double valor, DateTime dataValidade, int quantidade, Fornecedor fornecedor,TipoUsuario tipoProduto)
 		{
 			this.nome = nome;
 			this.valorUnitario = valor;
 			this.dataValidade= dataValidade;
 			this.quantidade = quantidade;
 			this.fornecedor = fornecedor;
+			this.tipoProduto = tipoProduto;
 		}
 		
 		#endregion
